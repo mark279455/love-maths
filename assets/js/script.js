@@ -16,9 +16,14 @@ document.addEventListener("DOMContentLoaded", function() {
         })
     }
 })
- 
-function runGame(){
 
+/**
+ * game loop called when script loaded and after users answer 
+ * to last question has been completed
+ */
+ function runGame(){
+    let num1 = Math.floor(Math.random()*25)+1;
+    let num2 = Math.floor(Math.random()*25)+1;
 }
 
 function checkAnswer(){
