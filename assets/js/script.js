@@ -14,6 +14,11 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         })
     }
+    document.getElementById("answer-box").addEventListener("keydown", function (event) {
+        if (event.key === "Enter") {
+            checkAnswer();
+        }
+    })
     runGame("addition");
 })
 
@@ -22,6 +27,15 @@ document.addEventListener("DOMContentLoaded", function () {
  * to last question has been completed
  */
 function runGame(gameType) {
+
+    // get answer-box
+    let answerBox = document.getElementById("answer-box");
+    // clear answer-box
+    answerBox.value = "";
+    // focus answer-box
+    answerBox.focus();
+
+    // generate numbers for game (less than 25)
     let num1 = Math.floor(Math.random() * 25) + 1;
     let num2 = Math.floor(Math.random() * 25) + 1;
 
